@@ -8,7 +8,7 @@ def sum_of_square(limit):
         p = sum(my_list)
         if len(my_list)==limit:
             m = sum(my_list)
-    return (m)
+    return m
 
 def square_of_sum(limit):
     list = []
@@ -20,7 +20,7 @@ def square_of_sum(limit):
     return p*p
 
 def difference(limit):
-    num_sum = (square_of_sum(limit))-(sum_of_square(limit))
-    print(num_sum)
+    num_sum = square_of_sum(limit)-sum_of_square(limit)
+    return num_sum
 
 difference(10)
