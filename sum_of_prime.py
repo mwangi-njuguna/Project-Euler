@@ -19,6 +19,9 @@ def is_prime(n):
 	#return True if the number is prime
     return True
 
+def is_prime(n):
+	return n>=2 and all([n%i!=0 for i in range(2,1+int(n**.5))]) #the simplicity in list comprehension
+
 def sum_prime(num):
 	#runs as per O(log(n))
 	prime_list=[]
@@ -28,6 +31,6 @@ def sum_prime(num):
 			prime_list.append(i)
 		i+=1
 
-	print(sum(prime_list))
+	return sum(prime_list)
 
 sum_prime(2000000)
